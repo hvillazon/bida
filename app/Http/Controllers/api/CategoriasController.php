@@ -14,6 +14,9 @@ class CategoriasController extends Controller
     public function index()
     {
         return categorias::all();
+        //construir como.json
+        //llenar todos los metodos
+        //descargar postman, consutar Apis
     }
 
     /**

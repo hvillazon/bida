@@ -27,3 +27,5 @@ Route::get('categorias',[CategoriasController::class,'index']);
 Route::get('usuarios',[UsuariosController::class,'index']);
 Route::get('informacion',[InformacionController::class,'index']);
 Route::get('productos',[ProductosController::class,'index']);
+Route::resource('photos', PhotoController::class);
+//cambiar rutas
