@@ -28,6 +28,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // });
 
 //CATEGORIAS
+
 Route::get('/categorias','App\Http\Controllers\CategoriasController@index');
 Route::post('/categorias','App\Http\Controllers\CategoriasController@store');
 Route::get('/categorias/{categoria}','App\Http\Controllers\CategoriasController@show');
@@ -36,6 +37,7 @@ Route::delete('/categorias/{categoria}','App\Http\Controllers\CategoriasControll
 
 
 //PRODUCTOS
+
 Route::get('/productos','App\Http\Controllers\ProductosController@index');
 Route::post('productos','App\Http\Controllers\ProductosController@store');
 Route::get('/productos/{producto}','App\Http\Controllers\ProductosController@show');
