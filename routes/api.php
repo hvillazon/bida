@@ -51,3 +51,4 @@ Route::delete('productos/{producto}','App\Http\Controllers\ProductosController@d
 // Route::resource('productos',ProductoController::class);
 // Route::resource('photos', PhotoController::class);
 //cambiar rutas
+
