@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\api;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Models\usuarios;
+use App\Models\Usuarios;
 use Illuminate\Http\Request;
 
 class UsuariosController extends Controller
@@ -13,7 +12,17 @@ class UsuariosController extends Controller
      */
     public function index()
     {
-        return usuarios::all();
+        //
+        $usuario= Usario::all();
+        return response()->json($usuario);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //
     }
 
     /**
@@ -27,7 +36,15 @@ class UsuariosController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Usuarios $usuarios)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(Usuarios $usuarios)
     {
         //
     }
@@ -35,7 +52,7 @@ class UsuariosController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Usuarios $usuarios)
     {
         //
     }
@@ -43,7 +60,7 @@ class UsuariosController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Usuarios $usuarios)
     {
         //
     }

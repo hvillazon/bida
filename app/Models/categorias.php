@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class categorias extends Model
+class Categorias extends Model
 {
     use HasFactory;
-    protected $fillable =[
-        'nombre'
-        // pasar a la BD
-    ];
+    public function Categorias(): BelongsToMany
+    {
+        return $this->belongsToMany(Categorias::class);
+    }
 }

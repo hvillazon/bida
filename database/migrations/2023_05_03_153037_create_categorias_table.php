@@ -9,27 +9,21 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('categorias', function (Blueprint $table) {
-            $table->increments('id')->onDelete('cascade');
-            $table->string('nombre');
+            $table->id();
+            $table->string('nombre',30);
             $table->text('descripcion')->nullable();
-            $table->text('imagen')->nullable();
-            $table->
+            $table->boolean('estado')->default(true);
             $table->timestamps();
-            $table->date_timestamp_get();
         });
-        
     }
-    
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('categorias');
     }

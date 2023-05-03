@@ -9,7 +9,7 @@ class Form extends Model
 {
     use HasFactory;
     public $fillable = [
-        'name',
+        'id',
         'email',
         'phone',
         'subject',

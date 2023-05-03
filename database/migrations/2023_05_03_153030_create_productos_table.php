@@ -8,16 +8,13 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('products', function (Blueprint $table) {
-            $table->increments('id')->onDelete('cascade');
-            $table->integer('categoria_id')->unsigned();
-
-            $table->string('nombre');
+        Schema::create('productos', function (Blueprint $table) {
+            $table->id();
+            $table->integer('categorias_id')->unsigned();
+            $table->string('nombre',30)->nullable();
             $table->text('descripcion')->nullable();
             $table->string('imagen')->nullable();
             $table->timestamps();
@@ -26,10 +23,8 @@ return new class extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('productos');
     }

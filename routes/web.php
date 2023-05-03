@@ -15,11 +15,17 @@ use App\Http\Controllers\FormValidtionController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    echo "API";
 });
 
 Route::get('/menu', function () {
     return view('menu');
+});
+
+
+
+Route::get('/categorias','App\Http\Controllers\CategoriasController@index', function(){
+    return $categorias;
 });
 
 Route::get('/form', [FormValidtionController::class, 'createUserForm']);
