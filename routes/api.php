@@ -29,3 +29,10 @@ Route::resource('informacion',InformacionController::class);
 Route::resource('productos',ProductosController::class);
 Route::resource('photos', PhotoController::class);
 //cambiar rutas
+
+Route::group(['prefix' => 'api/v1/user'], function(){
+    Route::get('/', [\App\Http\Controllers\Api\V1\UserController::class, 'index']);
+    Route::post('/', [\App\Http\Controllers\Api\V1\UserController::class, 'store']);
+    Route::get('/delete/{id}', [\App\Http\Controllers\Api\V1\UserController::class, 'destroy']);
+    Route::post('/update/{id}', [\App\Http\Controllers\Api\V1\UserController::class, 'update']);
+});

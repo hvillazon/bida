@@ -25,7 +25,7 @@
             @csrf
 
             <div class="form-group mb-2">
-                <label>Name</label>
+                <label>Nombre</label>
                 <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name">
 
                 @error('name')
@@ -36,31 +36,8 @@
             </div>
 
             <div class="form-group mb-2">
-                <label>Email</label>
-                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email">
-
-                @error('email')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-            </div>
-
-            <div class="form-group mb-2">
-                <label>Phone</label>
-                <input type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" id="phone">
-
-                @error('phone')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-            </div>
-
-            <div class="form-group mb-2">
-                <label>Subject</label>
+                <label>Descripción</label>
                 <input type="text" class="form-control @error('subject') is-invalid @enderror" name="subject" id="subject">
-
                 @error('subject')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -68,19 +45,9 @@
                 @enderror
             </div>
 
-            <div class="form-group mb-2">
-                <label>Message</label>
-                <textarea class="form-control @error('message') is-invalid @enderror" name="message" id="message" rows="4"></textarea>
-
-                @error('message')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-            </div>
 
             <div class="d-grid mt-3">
-              <input type="submit" name="send" value="Submit" class="btn btn-dark btn-block">
+              <input type="submit" name="send" value="Enviar" class="btn btn-dark btn-block">
             </div>
         </form>
     </div>
