@@ -1,4 +1,5 @@
 <?php
+echo "hello <p> yo quiero manzana </p>";
 
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
